@@ -1,0 +1,169 @@
+:root{
+    --fondo: #8f808d;
+    --primary: #40445f;
+    --secondary: #c3a19b;
+    --letras: #f0e5df;
+}
+
+body{
+    background-color: var(--fondo);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header{
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0
+}
+nav{
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+nav a{
+    margin-right: 20px;
+    color: var(--letras);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+    color: var(--primary);
+}
+
+.nav2{
+    background-color: transparent;
+}
+.nav2 a{
+    color: var(--primary);
+}
+.nav2 a:hover{
+    color: var(--letras);
+}
+
+
+h1{
+    display: flex;
+    align-content: center;
+    color: var(--letras);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+h2{
+    color: var(--letras);
+    text-align: center;
+    margin: 20px auto;
+    font-size: 30px;
+}
+h3{
+    color: var(--primary);
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 50px; /* Define una altura mínima para el título */
+}
+
+p{
+    margin-top: -15px;
+    color: var(--primary);
+}
+
+img{
+    display: block;
+    width: auto; /* Asegura que la imagen mantenga su proporción */
+    max-width: 100%; /* Limita el ancho de la imagen al contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-height: 150px; /* Define la altura máxima de las imágenes */
+    object-fit: contain;
+    transition: transform 0.3s ease; /* Transición suave para la imagen */
+}
+
+.menu-container{
+    padding: 20px;
+    max-width: 1200px; /* Establecer un ancho máximo para el contenedor */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+    width: 90%; /* Ancho del contenedor */
+}
+
+.menu-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espaciado entre productos */
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0; /* Elimina el padding por defecto de la lista */
+}
+
+.menu-container li {
+    background-color: var(--secondary); /* Color de fondo para cada producto */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno para cada producto */
+    text-align: center; /* Centrar el contenido */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.menu-container li:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del producto al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+}
+
+
+.contenedor-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+}
+
+.contenedor-productos p {
+    display: none; /* Oculta la descripción y el precio por defecto */
+}
+
+.menu-container li:hover .contenedor-productos p {
+    display: block; /* Muestra la descripción y el precio cuando se hace hover */
+}
+
+.contenedor-productos h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 50px;
+}
+.menu-container li:hover .contenedor-productos p {
+    opacity: 0; /* Inicia oculto */
+    animation: showInfo 0.5s forwards; /* Aplica la animación */
+}
+
+.contenedor-productos button {
+    background-color: var(--primary);
+    color: var(--letras);
+    border: none;
+    padding: 10px 15px; /* Espaciado del botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Suave transición del fondo */
+}
+
+.contenedor-productos button:hover {
+    background-color: var(--fondo); /* Color más oscuro al hacer hover */
+}
+
+@keyframes showInfo {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Inicia desde abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Aparece en su lugar */
+    }
+}
+

@@ -1,0 +1,27 @@
+[
+    {},
+    {},
+    {
+        "dataoferta": [{
+            "id_oferta":"1",
+            "nombre":"2x1 cafes calientes",
+            "imagen":"./img/oferta1.png"
+        },
+        {
+            "id_oferta":"2",
+            "nombre":"2x1 bubbleteas",
+            "imagen":"./img/oferta2.png"
+        },
+        {
+            "id_oferta":"3",
+            "nombre":"cafe + crossaint = 4.000",
+            "imagen":"./img/oferta3.png"
+        },
+        {
+            "id_oferta":"4",
+            "nombre":"50% cafe",
+            "imagen":"./img/oferta4.png"
+        }   
+    ]
+    }
+]
